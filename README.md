@@ -85,4 +85,18 @@ Configured in `/etc/login.defs` and `/etc/pam.d/common-password`.
 
 ---
 
-## 7.
+## 7. Monitoring Script
+A bash script (`monitoring.sh`) runs every 10 minutes via **Cron** to display system architecture and usage information to all terminals.
+
+**Commands used in the script:**
+* `uname -a`: Architecture and kernel version.
+* `nproc`: Number of physical/virtual processors.
+* `free -m`: RAM usage.
+* `df -h`: Disk usage.
+* `top` / `mpstat`: CPU load.
+* `who -b`: Last boot time.
+* `ss` / `netstat`: Active connections.
+* `wall`: Broadcasts the message to all users.
+
+---
+*Project created by Tweakkin.*
